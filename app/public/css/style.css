@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main { flex: 1 0 auto; }
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 0px;
+
+}
+
+.panel-primary {
+  width: 100%;
+  float: left;
+}
+
+.panel-info {
+  width: 100%;
+  float: right;
+  overflow: auto;
+
+}
+
+#copyright {
+  float: right;
+  position: relative;
+  left: 5%;
+}
+
+.btn-danger {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 10px;
+
+
+}
+
+.edit-btn {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 10px;
+
+
+}
+
+.rightNav {
+  float: right;
+}
+
+.card-panel { overflow: auto; }

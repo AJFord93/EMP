@@ -1,0 +1,70 @@
+<main>
+<div class="jumbotron">
+  <div class="container">
+      <h1>Add, View + Update Contacts</h1>
+      <p>Fill out the form below to get started!</p>
+      <p><a class="btn btn-primary btn-lg" href="/contacts" role="button">View All</a></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-6">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add Contact</h3>
+  </div>
+  <div class="panel-body">
+
+    <form action="/api/contacts" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" name="first_name" class="form-control" id="firstName" placeholder="John">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Doe">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" class="form-control" id="phone" placeholder="(800)-867-5309">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Email@Email.com">
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" name="current_city" class="form-control" id="currentLocation" placeholder="New York">
+      </div>
+      <div class="form-group">
+        <label for="gender">Affiliate Code</label>
+        <input type="text" name="aff_code" class="form-control" id="aff_code" placeholder="Affiliate Code">
+      </div>
+      <div class="form-group">
+        <label for="gender">Twitter</label>
+        <input type="text" name="twitter" class="form-control" id="twitter" placeholder="@Twitter">
+      </div>
+      <div class="form-group">
+        <label for="gender">Instagram</label>
+        <input type="text" name="instagram" class="form-control" id="instagram" placeholder="@Instagram">
+      </div>
+
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+</div> <!-- end container -->
+</main>

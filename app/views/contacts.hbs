@@ -1,0 +1,61 @@
+<main>
+
+<div class="jumbotron">
+  <div class="container">
+      <h1>Update Contacts</h1>
+      <p>Please select a contact to update.</p>
+      <p><a class="btn btn-warning btn-lg" href="/" role="button">Add Contact</a></p>
+  </div>
+</div>
+
+<div class="col-md-12">
+<table class="table table-hover">
+  <tr>
+    <th> Id </th>
+    <th> First Name </th>
+    <th> Last Name </th>
+    <th> Phone </th>
+    <th> Email </th>
+    <th> Location </th>
+    <th>  Affiliate Code </th>
+    <th> Twitter </th>
+    <th> Instagram </th>
+    <th> Delete </th>
+    <th> Edit </th>
+  </tr>
+
+
+
+{{#each contacts}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{first_name}}</td>
+        <td>{{last_name}}</td>
+        <td>{{phone}}</td>
+        <td>{{email}}</td>
+        <td>{{current_city}}</td>
+        <td>{{aff_code}}</td>
+        <td>{{twitter}}</td>
+        <td>{{instagram}}</td>
+        <td>
+
+
+          <form action="/api/contacts/{{ id }}?_method=DELETE" id="{{id}}" method="post">
+          <button type="submit" form="{{id}}"  value="submit" class="btn btn-danger">X</button>
+        </form>
+
+
+        </td>
+
+        <td>
+
+          <a href="/edit/{{id}}" type="submit"  value="submit" class="btn btn-success edit-btn">✓</a>
+
+        </td>
+    </tr>
+{{/each}}
+</tbody>
+
+</table>
+</div>
+</main>
