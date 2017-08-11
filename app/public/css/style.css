@@ -62,3 +62,12 @@ main { flex: 1 0 auto; }
 }
 
 .card-panel { overflow: auto; }
+
+.navbar-fixed-bottom {
+  bottom: 0;
+   height: 2em;
+   left: 0;
+   position: relative; 
+   font-size: small;
+   width:100%;
+}
