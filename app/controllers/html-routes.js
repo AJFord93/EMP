@@ -6,14 +6,25 @@ module.exports = function(app){
 
 
 
-  app.get('/', isLoggedIn, function(req, res) {
-      res.render('index.hbs'); // load the index.ejs file
+  app.get('/', isLoggedIn, function(req, res, next) {
+      res.render('index.hbs', {
+        user: req.user
+      }); // load the index.ejs file
+
+      const user = req.user.first_name + " " + req.user.last_name;
+      console.log(user);
        });
 
 
   app.get('/contacts', isLoggedIn, function(req, res) {
       db.models.findAll({}).then(function(modelPost){
-          res.render('contacts', {contacts: modelPost});
+          res.render('contacts', {
+            contacts: modelPost,
+            user: req.user
+          });
+
+          const user = req.user.first_name + " " + req.user.last_name;
+          console.log(user);
         });
   });
 

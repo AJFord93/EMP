@@ -14,6 +14,13 @@ var connection = mysql.createConnection({
 
 connection.query('USE iqlrivn79i4fo7n1');
 
+// var connection = mysql.createConnection({
+// 				  host     : 'localhost',
+// 				  user     : 'root',
+// 				  password : 'root'
+// 				});
+//
+// connection.query('USE agency_contacts');
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 

@@ -4,6 +4,26 @@ body {
     flex-direction: column;
 }
 
+.add-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 3px 2px 4px grey;
+}
+
+.navbar-brand {
+  background-color: white;
+}
+#cockyboys {
+  position: relative;
+  bottom: 60%;
+  height: auto;
+  width: 14em;
+}
+
 main { flex: 1 0 auto; }
 
 .navbar-brand {
@@ -67,7 +87,7 @@ main { flex: 1 0 auto; }
   bottom: 0;
    height: 2em;
    left: 0;
-   position: relative; 
+   position: relative;
    font-size: small;
    width:100%;
 }

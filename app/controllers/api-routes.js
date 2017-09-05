@@ -10,6 +10,7 @@ module.exports = (app, passport) => {
      * API route returns all todos through json response.
      */
     app.get('/api/contacts', (req, res) => {
+      // console.log(req);
       db.models.findAll({}).then(function(modelPost){
         res.json(modelPost);
 

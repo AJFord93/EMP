@@ -63,7 +63,7 @@ CREATE TABLE `users` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'AJ','Ford','AJCranford1019@gmail.com','ajay1019','2017-09-01 18:11:12','2017-09-02 18:02:03');
+INSERT INTO `users` VALUES (1,'AJ','Ford','AJCranford1019@gmail.com','ajay1019','2017-09-01 18:11:12','2017-09-02 18:02:03'),(2,'Hugo','Harley','hugo@emp-nyc.com','cockypuppy69','2017-09-05 12:00:00','2017-09-05 12:00:00');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -85,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-05 11:49:17
+-- Dump completed on 2017-09-05 11:57:59
