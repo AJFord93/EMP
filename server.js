@@ -2,10 +2,13 @@
 // Dependencies
 //=================================================================
 const express = require('express');
+const flash = require('connect-flash');
 const exphbs = require('express-handlebars');
+
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const logger = require('morgan');
+
 const db = require("./app/models");
 
 
@@ -46,6 +49,16 @@ app.engine('.hbs', exphbs({
 
 app.set('view engine', '.hbs');
 app.set('views', 'app/views/');
+
+const session = require('express-session');
+const passport = require('passport');
+require('./app/config/passport.js')(passport);
+// required for passport
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
 const PORT = process.env.PORT || 8080;
 
 //=================================================================
@@ -58,8 +71,9 @@ app.use('/public', express.static('./app/public/'));
 //=================================================================
 // Configure route controllers
 //=================================================================
-require('./app/controllers/html-routes')(app);
-require('./app/controllers/api-routes')(app);
+require('./app/controllers/html-routes')(app, passport);
+require('./app/controllers/api-routes')(app, passport);
+require('./app/controllers/routes')(app, passport);
 
 // ================================================================
 // Catch 404 errors, render 404 page with message.

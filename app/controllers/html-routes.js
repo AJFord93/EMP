@@ -4,21 +4,20 @@ const db = require('../models');
 
 module.exports = function(app){
 
-  app.get('/', function(req, res){
-    res.render('index', {});
-  });
 
-  app.get('/login', function(req, res){
-    res.render('login', {});
-  });
 
-  app.get('/contacts', function(req, res) {
+  app.get('/', isLoggedIn, function(req, res) {
+      res.render('index.hbs'); // load the index.ejs file
+       });
+
+
+  app.get('/contacts', isLoggedIn, function(req, res) {
       db.models.findAll({}).then(function(modelPost){
           res.render('contacts', {contacts: modelPost});
         });
   });
 
-  app.get('/edit/:id', function(req, res){
+  app.get('/edit/:id', isLoggedIn, function(req, res){
     db.models.findOne({
       where: {
         id: req.params.id
@@ -28,10 +27,14 @@ module.exports = function(app){
     });
   });
 
-  app.get('/package', function(req, res) {
+  function isLoggedIn(req, res, next) {
 
-          res.render('package', {});
-        });
+      // if user is authenticated in the session, carry on
+      if (req.isAuthenticated())
+          return next();
 
+      // if they aren't redirect them to the home page
+      res.redirect('/signin');
+  }
 
 };

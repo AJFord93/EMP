@@ -1,9 +1,10 @@
 const db = require('../models');
+const passport = require('passport');
+const config = require('../config/passport.js');
 
 
 
-
-module.exports = (app) => {
+module.exports = (app, passport) => {
 
     /**
      * API route returns all todos through json response.
