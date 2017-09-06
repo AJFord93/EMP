@@ -22,6 +22,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    photo_url: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    company: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     current_city: {
       type: DataTypes.STRING,
       allowNull: true

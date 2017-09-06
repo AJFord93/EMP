@@ -23,8 +23,11 @@ module.exports = function(app){
             user: req.user
           });
 
-          const user = req.user.first_name + " " + req.user.last_name;
+          const user = req.user;
           console.log(user);
+
+          const contacts = modelPost;
+          console.log(modelPost);
         });
   });
 

@@ -34,10 +34,12 @@ module.exports = (app, passport) => {
        last_name    : req.body.last_name,
        phone: req.body.phone,
        email: req.body.email,
+       company: req.body.company,
        current_city: req.body.current_city,
        aff_code: req.body.aff_code,
        twitter: req.body.twitter,
-       instagram: req.body.instagram
+       instagram: req.body.instagram,
+      photo_url: req.body.photo_url
      })
        .then(function(modelPost) {
          res.redirect('/');
@@ -54,10 +56,12 @@ module.exports = (app, passport) => {
        last_name    : req.body.last_name,
        phone: req.body.phone,
        email: req.body.email,
+       company: req.body.company,
        current_city: req.body.current_city,
        aff_code: req.body.aff_code,
        twitter: req.body.twitter,
-       instagram: req.body.instagram
+       instagram: req.body.instagram,
+       photo_url: req.body.photo_url
      }, {
        where: {
          id: req.params.id
