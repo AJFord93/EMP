@@ -9,7 +9,7 @@ body {
   justify-content: center;
 }
 
-.navbar.navbar-header {
+.navbar.navbar-default {
   background-color: white;
   box-shadow: 3px 2px 4px grey;
 }
