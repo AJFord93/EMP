@@ -17,7 +17,11 @@ module.exports = function(app){
 
 
   app.get('/contacts', isLoggedIn, function(req, res) {
-      db.models.findAll({}).then(function(modelPost){
+      db.models.findAll({
+        order: [
+          ['first_name', 'ASC']
+        ]
+      }).then(function(modelPost){
           res.render('contacts', {
             contacts: modelPost,
             user: req.user
