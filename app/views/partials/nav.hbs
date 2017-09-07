@@ -15,9 +15,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><a href="#">   {{#if user}}
+          <b>Hello, {{user.first_name}} {{user.last_name}}! </b>
+          {{/if}}
+        </a> </li>
         <li><a href="/">Add <span class="sr-only">(current)</span></a></li>
         <li><a href="/contacts">View All</a></li>
-
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if user}}
