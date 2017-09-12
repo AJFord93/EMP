@@ -48,6 +48,15 @@
         <label for="gender">Instagram</label>
         <input type="text" value="{{contact.instagram}}" name="instagram" class="form-control" id="instagram">
       </div>
-
+      <div class="form-group">
+      <label for="exclusive">Exclusive</label>
+      <select class="form-control" id="exclusive" name="exclusive">
+        <option>{{contact.exclusive}}</option>
+        <option>Exclusive</option>
+        <option>Semi-Exclusive</option>
+        <option>Non-Exclusive</option>
+      </select>
+    </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
+  </main>

@@ -39,7 +39,8 @@ module.exports = (app, passport) => {
        aff_code: req.body.aff_code,
        twitter: req.body.twitter,
        instagram: req.body.instagram,
-      photo_url: req.body.photo_url
+      photo_url: req.body.photo_url,
+      exclusive: req.body.exclusive
      })
        .then(function(modelPost) {
          res.redirect('/');
@@ -61,7 +62,8 @@ module.exports = (app, passport) => {
        aff_code: req.body.aff_code,
        twitter: req.body.twitter,
        instagram: req.body.instagram,
-       photo_url: req.body.photo_url
+       photo_url: req.body.photo_url,
+       exclusive: req.body.exclusive
      }, {
        where: {
          id: req.params.id

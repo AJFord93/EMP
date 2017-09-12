@@ -45,6 +45,10 @@ module.exports = function(sequelize, DataTypes) {
     instagram: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    exclusive: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
 
   });
