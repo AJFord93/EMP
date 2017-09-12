@@ -41,7 +41,10 @@ module.exports = function(app){
         id: req.params.id
       }
     }).then(function(modelPost){
-      res.render('edit', {contact: modelPost});
+      res.render('edit', {
+        contact: modelPost,
+        user: req.user
+      });
     });
   });
 

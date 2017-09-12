@@ -14,6 +14,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
+    performer_first_name: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    performer_last_name: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     phone: {
       type: DataTypes.STRING,
       defaultValue: "Personal"

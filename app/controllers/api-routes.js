@@ -32,6 +32,8 @@ module.exports = (app, passport) => {
      db.models.create({
        first_name   : req.body.first_name,
        last_name    : req.body.last_name,
+       performer_first_name   : req.body.performer_first_name,
+       performer_last_name    : req.body.performer_last_name,
        phone: req.body.phone,
        email: req.body.email,
        company: req.body.company,
@@ -55,6 +57,8 @@ module.exports = (app, passport) => {
      db.models.update({
        first_name   : req.body.first_name,
        last_name    : req.body.last_name,
+       performer_first_name   : req.body.performer_first_name,
+       performer_last_name    : req.body.performer_last_name,
        phone: req.body.phone,
        email: req.body.email,
        company: req.body.company,

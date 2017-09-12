@@ -8,26 +8,36 @@
 </div>
 
 <div class="container">
-  <div class="col-md-6">
+  <div class="col-md-8">
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">Edit Contact</h3>
   </div>
   <div class="panel-body">
-
+    <div class="col-md-6">
     <form action="/api/contacts/{{contact.id}}?_method=PUT" method="post">
       <div class="form-group">
-        <label for="firstName">First Name</label>
+        <label for="firstName">Legal First Name</label>
         <input type="text" value="{{contact.first_name}}" name="first_name" class="form-control" id="firstName">
       </div>
       <div class="form-group">
-        <label for="lastName">Last Name</label>
+        <label for="lastName">Legal Last Name</label>
         <input type="text" value="{{contact.last_name}}" name="last_name" class="form-control" id="lastName">
+      </div>
+      <div class="form-group">
+        <label for="firstName">Performer First Name</label>
+        <input type="text" value="{{contact.performer_first_name}}" name="first_name" class="form-control" id="firstName">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Performer Last Name</label>
+        <input type="text" value="{{contact.performer_last_name}}" name="last_name" class="form-control" id="lastName">
       </div>
       <div class="form-group">
         <label for="phone">Phone</label>
         <input type="text" value="{{contact.phone}}" name="phone" class="form-control" id="phone">
       </div>
+    </div>
+    <div class="col-md-6">
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" value="{{contact.email}}" name="email" class="form-control" id="email">
@@ -51,12 +61,14 @@
       <div class="form-group">
       <label for="exclusive">Exclusive</label>
       <select class="form-control" id="exclusive" name="exclusive">
-        <option>{{contact.exclusive}}</option>
+        <option selected>{{contact.exclusive}}</option>
         <option>Exclusive</option>
         <option>Semi-Exclusive</option>
         <option>Non-Exclusive</option>
       </select>
     </div>
+  </div>
+  
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </main>
