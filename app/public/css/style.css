@@ -124,3 +124,9 @@ float: left;
 .edit-model-btn {
   float: left;
 }
+
+.rounded {
+  float: left;
+  position: relative;
+  right: 60%;
+}
