@@ -19,7 +19,8 @@ module.exports = function(app){
   app.get('/contacts', isLoggedIn, function(req, res) {
       db.models.findAll({
         order: [
-          ['exclusive', 'ASC']
+          ['exclusive', 'ASC'],
+          ['performer_first_name', 'ASC']
         ]
       }).then(function(modelPost){
           res.render('contacts', {
@@ -33,7 +34,8 @@ module.exports = function(app){
   app.get('/table_view', isLoggedIn, function(req, res) {
       db.models.findAll({
         order: [
-          ['exclusive', 'ASC']
+          ['exclusive', 'ASC'],
+          ['performer_first_name', 'ASC']
         ]
       }).then(function(modelPost){
           res.render('table_view', {
