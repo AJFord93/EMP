@@ -2,6 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 .add-container {
@@ -41,11 +43,6 @@ main { flex: 1 0 auto; }
   margin-right: 10px;
   margin-left: 0px;
 
-}
-
-.panel-primary {
-  width: 100%;
-  float: left;
 }
 
 .card-info {
@@ -96,6 +93,7 @@ main { flex: 1 0 auto; }
   max-height: 40rem;
   min-width: 20rem;
   min-height: 40rem;
+  margin: 1em;
 }
 
 .card-img-top {
@@ -106,9 +104,11 @@ main { flex: 1 0 auto; }
   min-width: 20rem;
 }
 
-.table {
-  table-layout:inherit;
-  width:60%;
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
 }
 
 .delete-btn {
@@ -129,4 +129,10 @@ float: left;
   float: left;
   position: relative;
   right: 60%;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+
 }

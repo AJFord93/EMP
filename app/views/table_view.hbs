@@ -36,19 +36,19 @@
         <td>{{performer_first_name}} </td>
         <td>{{performer_last_name}} </td>
         <td>{{phone}}</td>
-        <td>{{email}}</td>
+        <td class="expand">{{email}}</td>
         <td>{{company}}</td>
         <td>{{current_city}}</td>
         <td>{{twitter}}</td>
         <td>{{instagram}}</td>
         <td>{{exclusive}}</td>
-        <td>
+        <td class="shrink">
           <form action="/api/contacts/{{ id }}?_method=DELETE" id="{{id}}" method="post">
           <button type="submit" form="{{id}}"  value="submit" class="btn btn-danger">X</button>
         </form>
         </td>
 
-        <td>
+        <td class="shrink">
           <a href="/edit/{{id}}" type="submit"  value="submit"><button class="btn btn-success ">✓</button></a>
         </td>
     </tr>
