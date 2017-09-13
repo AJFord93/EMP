@@ -104,8 +104,10 @@ main { flex: 1 0 auto; }
   max-height: 25rem;
   min-height: 25rem;
   min-width: 20rem;
+}
 
-
+.table {
+  max-width: 100%;
 }
 
 .delete-btn {
