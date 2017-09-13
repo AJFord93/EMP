@@ -4,15 +4,11 @@ module.exports = function(sequelize, DataTypes) {
 
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      allowNull: false
     },
     last_name: {
       type: DataTypes.TEXT,
       allowNull: false,
-      len: [1]
     },
     performer_first_name: {
       type: DataTypes.TEXT,
