@@ -94,12 +94,17 @@ main { flex: 1 0 auto; }
   width: 18%;
   max-width: 20rem;
   max-height: 40rem;
+  min-width: 20rem;
+  min-height: 40rem;
 }
 
 .card-img-top {
   width: 100%;
   height: auto;
-  max-height: 25em;
+  max-height: 25rem;
+  min-height: 25rem;
+  min-width: 20rem;
+
 
 }
 
@@ -111,4 +116,8 @@ main { flex: 1 0 auto; }
 .edit-btn {
 float: left;
 
+}
+
+.edit-model-btn {
+  float: left;
 }
