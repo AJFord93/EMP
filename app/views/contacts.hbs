@@ -8,59 +8,52 @@
   </div>
 </div>
 
-<div class="col-md-12">
-<table class="table table-hover">
-  <tr>
-    <th> Legal First Name </th>
-    <th> Legal Last Name </th>
-    <th> Performer First Name </th>
-    <th> Performer Last Name </th>
-    <th> Phone </th>
-    <th> Email </th>
-    <th> Company </th>
-    <th> Location </th>
-    <th>  Affiliate Code </th>
-    <th> Twitter </th>
-    <th> Instagram </th>
-    <th> Exclusive </th>
-    <th> Delete </th>
-    <th> Edit </th>
-  </tr>
-
 
 {{#each contacts}}
-    <tr>
-        <td>{{first_name}}</td>
-        <td>{{last_name}}</td>
-        <td>{{performer_first_name}} </td>
-        <td> {{performer_last_name}} </td>
-        <td>{{phone}}</td>
-        <td>{{email}}</td>
-        <td>{{company}}</td>
-        <td>{{current_city}}</td>
-        <td>{{aff_code}}</td>
-        <td>{{twitter}}</td>
-        <td>{{instagram}}</td>
-        <td> {{exclusive}}</td>
-        <td>
+
+<div class="col-sm">
+<div class="card card-model" style="">
+  {{#if photo_url}}
+  <img class="card-img-top" src="{{photo_url}}" alt="Card image cap">
+  {{else}}
+  <img class="card-img-top" src="../public/img/noimg.jpg" alt="Card image cap">
+  {{/if}}
+  <div class="card-body">
+    <h4 class="card-title">{{performer_first_name}} {{performer_last_name}}</h4>
+    <h6 class="card-subtitle"> {{first_name}} {{last_name}} </h6>
+    <p class="card-text">
+      <ul>
+        <li> {{phone}} </li>
+        <li> {{email}} </li>
+        {{#if twitter}}
+        <li> {{twitter}} </li>
+        {{else}}
+        <li> {{instagram}} </li>
+        {{/if}}
+        <li> {{exclusive}} </li>
+      </ul>
+      <div class="text-center">
+        <div class="row">
+          <div class="col-md-6">
+      <form action="/api/contacts/{{ id }}?_method=DELETE" id="{{id}}" method="post">
+        <button type="submit" form="{{id}}"  value="submit" class="btn btn-danger delete-btn">X</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+       <a href="/edit/{{id}}" type="submit"  value="submit"><button class="btn btn-success edit-btn">✓</button></a>
+    </div>
+  </div>
+  </div>
+    </p>
+  </div>
+</div>
+</div>
 
 
-          <form action="/api/contacts/{{ id }}?_method=DELETE" id="{{id}}" method="post">
-          <button type="submit" form="{{id}}"  value="submit" class="btn btn-danger">X</button>
-        </form>
 
 
-        </td>
-
-        <td>
-
-          <a href="/edit/{{id}}" type="submit"  value="submit" class="btn btn-success edit-btn">✓</a>
-
-        </td>
-    </tr>
 {{/each}}
-</tbody>
 
-</table>
+
 </div>
 </main>

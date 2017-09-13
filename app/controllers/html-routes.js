@@ -19,7 +19,7 @@ module.exports = function(app){
   app.get('/contacts', isLoggedIn, function(req, res) {
       db.models.findAll({
         order: [
-          ['first_name', 'ASC']
+          ['exclusive', 'ASC']
         ]
       }).then(function(modelPost){
           res.render('contacts', {
@@ -27,11 +27,20 @@ module.exports = function(app){
             user: req.user
           });
 
-          const user = req.user;
-          console.log(user);
+        });
+  });
 
-          const contacts = modelPost;
-          console.log(modelPost);
+  app.get('/table_view', isLoggedIn, function(req, res) {
+      db.models.findAll({
+        order: [
+          ['exclusive', 'ASC']
+        ]
+      }).then(function(modelPost){
+          res.render('table_view', {
+            contacts: modelPost,
+            user: req.user
+          });
+
         });
   });
 

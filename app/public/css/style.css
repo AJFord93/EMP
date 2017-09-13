@@ -9,13 +9,13 @@ body {
   justify-content: center;
 }
 
-.navbar.navbar-default {
+.navbar.navbar-brand {
   background-color: white;
   box-shadow: 3px 2px 4px grey;
 }
 
 
-.navbar-brand {
+.navbar {
   background-color: white;
 }
 
@@ -48,7 +48,7 @@ main { flex: 1 0 auto; }
   float: left;
 }
 
-.panel-info {
+.card-info {
   width: 100%;
   float: right;
   overflow: auto;
@@ -61,39 +61,20 @@ main { flex: 1 0 auto; }
   left: 5%;
 }
 
-.btn-danger {
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  line-height: 10px;
-
-}
 
 #newbtn {
   position: relative;
   left: 47%;
-
-
-}
-
-.edit-btn {
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  line-height: 10px;
-
-
 }
 
 .rightNav {
   float: right;
 }
 
-.card-panel { overflow: auto; }
 
 .navbar-fixed-bottom {
   bottom: 0;
-   height: 2em;
+   height: 4em;
    left: 0;
    position: relative;
    font-size: small;
@@ -104,4 +85,30 @@ main { flex: 1 0 auto; }
   position: relative;
   float: left;
   right: 20%;
+}
+
+.card-model {
+  float:left;
+  display: inline;
+  margin: 1%;
+  width: 18%;
+  max-width: 20rem;
+  max-height: 40rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 25em;
+
+}
+
+.delete-btn {
+  float: right;
+
+}
+
+.edit-btn {
+float: left;
+
 }
