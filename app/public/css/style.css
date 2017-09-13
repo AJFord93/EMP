@@ -107,7 +107,8 @@ main { flex: 1 0 auto; }
 }
 
 .table {
-  max-width: 100%;
+  table-layout:inherit;
+  width:60%;
 }
 
 .delete-btn {
